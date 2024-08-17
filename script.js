@@ -140,11 +140,9 @@ function checkGuess(pressedKey) {
 // 3) if the key is currently yellow, only allow it to become green
 // 4) else, shade the key passed to the function
 function shadeKeyBoard(letter,color) {
-    console.log(`letter is "${letter}". color is "${color}"`)
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
             let oldColor = elem.style.backgroundColor
-            console.log(`${oldColor}`)
             if (oldColor == 'green') {
                 return
             }
